@@ -5,7 +5,13 @@
     "build": "next build",
     "start": "next start"
   },
+  "browser": {
+    "child_process": false
+  },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.2.0",
+    "@tensorflow/tfjs-node": "^4.2.0",
+    "@tensorflow/tfjs-node-gpu": "^4.2.0",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "latest",

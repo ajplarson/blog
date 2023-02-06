@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Blurb from "../components/Blurb";
 import Layout, { siteTitle } from "../components/layout";
 import PostList from "../components/PostList";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../utils/posts";
+import TfModel from "../components/TfModel";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,7 +21,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <Blurb />
+        <TfModel />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <PostList allPostsData={allPostsData} />
